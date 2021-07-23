@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Pager = void 0;
 /** Wrapping iterable objects with the pager function. */
-export class Pager {
+class Pager {
     views;
-    _index = 0;
+    #_index = 0;
     values;
     /**
      * Switch the current page
@@ -33,18 +36,18 @@ export class Pager {
     /** @param index - Page number to move to */
     set index(index) {
         if (index < 0) {
-            this._index = 0;
+            this.#_index = 0;
             return;
         }
         if (this.lastIndex <= index) {
             this.index = this.lastIndex - 1;
             return;
         }
-        this._index = index;
+        this.#_index = index;
     }
     /** @returns - The current page number. */
     get index() {
-        return this._index;
+        return this.#_index;
     }
     /** @returns - Items on the current page. */
     get page() {
@@ -71,3 +74,4 @@ export class Pager {
         });
     }
 }
+exports.Pager = Pager;

@@ -1,7 +1,7 @@
 /** Wrapping iterable objects with the pager function. */
 export declare class Pager<T = any> {
+    #private;
     views: number;
-    private _index;
     values: T[];
     /**
      * Switch the current page
