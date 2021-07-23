@@ -1,6 +1,6 @@
 /** Wrapping iterable objects with the pager function. */
 export class Pager<T = any> {
-  private _index = 0;
+  #_index = 0;
   public values: T[];
 
   /**
@@ -38,7 +38,7 @@ export class Pager<T = any> {
   /** @param index - Page number to move to */
   set index(index) {
     if (index < 0) {
-      this._index = 0;
+      this.#_index = 0;
 
       return;
     }
@@ -49,12 +49,12 @@ export class Pager<T = any> {
       return;
     }
 
-    this._index = index;
+    this.#_index = index;
   }
 
   /** @returns - The current page number. */
   get index() {
-    return this._index;
+    return this.#_index;
   }
 
   /** @returns - Items on the current page. */
