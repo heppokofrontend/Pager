@@ -16,6 +16,8 @@ npm install --save @heppokofrontend/pager
 
 ### Instance
 
+#### Properties
+
 |property name|type|readonly|description|
 |---|---|---|---|
 |`values`|`T[]`|`true`|Iterable objects to be managed by the pager.|
@@ -24,6 +26,8 @@ npm install --save @heppokofrontend/pager
 |`get index()`|`number`||The current page number.|
 |`get lastIndex()`|`number`|`true`|Last page number.|
 |`get page()`|`T[]`|`true`|Items on the current page.<br>It is recommended to cache the got values.|
+
+#### Methods
 
 |method name|type|description|
 |---|---|---|
@@ -46,7 +50,7 @@ Any iterable object.
 
 If specified, number of items to be displayed per page.
 
-The default value is 5.
+The default value is `5`.
 
 ### Example:
 
