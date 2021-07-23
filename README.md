@@ -8,16 +8,51 @@ Wrapping iterable objects with the pager function.
 
 ## Usage
 
-Installation:
+### Installation:
 
 ```shell
 npm install --save @heppokofrontend/pager
 ```
 
-Example: 
+### Instance
+
+|property name|type|readonly|description|
+|---|---|---|---|
+|`values`|`T[]`|`true`|Iterable objects to be managed by the pager.|
+|`views`|`number`||Number of items to be displayed per page.|
+|`set index()`|`number`||Page number to move to.|
+|`get index()`|`number`||The current page number.|
+|`get lastIndex()`|`number`|`true`|Last page number.|
+|`get page()`|`T[]`|`true`|Items on the current page.<br>It is recommended to cache the got values.|
+
+|method name|type|description|
+|---|---|---|
+|`current()`|`(index: number) => T[]`|Switch the current page to any page.|
+|`next()`|`() => T[]`|Switch the current page to the next.|
+|`prev()`|`() => T[]`|Switch the current page to the previous.|
+
+
+### Syntax
+
+```js
+new Pager(values[, views])
+```
+
+#### `values`
+
+Any iterable object.
+
+#### `views`
+
+If specified, number of items to be displayed per page.
+
+The default value is 5.
+
+### Example:
 
 ```javascript
 import { Pager } from '@heppokofrontend/pager';
+// const { Pager } = require('@heppokofrontend/pager');
 
 const pager = new Pager([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
