@@ -38,7 +38,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "lint": "eslint --fix",
+    "lint": "eslint \"./src/**/*.ts\" --fix",
     "prepublishOnly": "npm run build",
     "prestart": "git config commit.template .gitmessage",
     "start": "tsc -w",

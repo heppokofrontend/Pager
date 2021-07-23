@@ -12,7 +12,6 @@ plugins:
 rules:
   max-len: 'off'
   no-unused-vars: 'off'
-  react/prop-types: 'off'
   require-jsdoc: 'off'
   valid-jsdoc:
     - error
