@@ -90,3 +90,7 @@ pager.current(7); // => [7, 8]
 ## License
 
 MIT
+
+## 元ネタ
+
+https://qiita.com/heppokofrontend/items/52d95a11c5e5ee4f1ca6
