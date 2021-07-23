@@ -1,4 +1,4 @@
-/** Wrapping iterable objects with the pager function. */
+/** Wrapping iterable objects with the pager function */
 export class Pager<T = any> {
   #_index = 0;
   public values: T[];
@@ -52,12 +52,12 @@ export class Pager<T = any> {
     this.#_index = index;
   }
 
-  /** @returns - The current page number. */
+  /** @returns - The current page number */
   get index() {
     return this.#_index;
   }
 
-  /** @returns - Items on the current page. */
+  /** @returns - Items on the current page */
   get page() {
     const {views, index} = this;
     const start = index * views;
