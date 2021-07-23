@@ -6,7 +6,7 @@ export class Pager<T = any> {
   /**
    * Switch the current page
    * @param index - Page number to move to
-   * @returns - the current page number.
+   * @returns - Items on the current page.
    */
   public current(index: number) {
     this.index = index;
@@ -16,7 +16,7 @@ export class Pager<T = any> {
 
   /**
    * Switch the current page to the next.
-   * @returns - the current page number.
+   * @returns - Items on the next page.
    */
   public next() {
     return this.current(++this.index);
@@ -24,7 +24,7 @@ export class Pager<T = any> {
 
   /**
    * Switch the current page to the previous.
-   * @returns - the current page number.
+   * @returns - Items on the previous page.
    */
   public prev() {
     return this.current(--this.index);
@@ -57,7 +57,7 @@ export class Pager<T = any> {
     return this._index;
   }
 
-  /** @returns - The current page number. */
+  /** @returns - Items on the current page. */
   get page() {
     const {views, index} = this;
     const start = index * views;
