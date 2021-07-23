@@ -1,7 +1,7 @@
 {
   "name": "@heppokofrontend/pager",
   "description": "Wrapping iterable objects with the pager function.",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "author": "heppokofrontend <heppokofrontend@gmail.com> (https://github.com/heppokofrontend)",
   "bugs": {
     "url": "https://github.com/heppokofrontend/pager/issues"
