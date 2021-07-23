@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Pager = void 0;
-/** Wrapping iterable objects with the pager function. */
+/** Wrapping iterable objects with the pager function */
 class Pager {
     views;
     #_index = 0;
@@ -45,11 +45,11 @@ class Pager {
         }
         this.#_index = index;
     }
-    /** @returns - The current page number. */
+    /** @returns - The current page number */
     get index() {
         return this.#_index;
     }
-    /** @returns - Items on the current page. */
+    /** @returns - Items on the current page */
     get page() {
         const { views, index } = this;
         const start = index * views;

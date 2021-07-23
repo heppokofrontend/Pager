@@ -1,4 +1,4 @@
-/** Wrapping iterable objects with the pager function. */
+/** Wrapping iterable objects with the pager function */
 export declare class Pager<T = any> {
     #private;
     views: number;
@@ -23,9 +23,9 @@ export declare class Pager<T = any> {
     get lastIndex(): number;
     /** @param index - Page number to move to */
     set index(index: number);
-    /** @returns - The current page number. */
+    /** @returns - The current page number */
     get index(): number;
-    /** @returns - Items on the current page. */
+    /** @returns - Items on the current page */
     get page(): T[];
     /** A generator that returns this.values */
     [Symbol.iterator](): Generator<T, void, undefined>;
